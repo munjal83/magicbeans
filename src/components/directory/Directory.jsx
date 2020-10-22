@@ -1,5 +1,5 @@
 import React from 'react';
-import { MenuItem } from '../menuitem/MenuItem';
+import MenuItem from '../menuitem/MenuItem';
 import './Directory.scss';
 
 class Directory extends React.Component {
@@ -10,32 +10,32 @@ class Directory extends React.Component {
       sections: [
         {
           title: 'beverages',
-          imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+          imageUrl: 'https://images.pexels.com/photos/683039/pexels-photo-683039.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
           id: 1,
-          linkUrl: 'shop/beverages',
+          linkUrl: 'beverages',
         },
         {
           title: 'merchandise',
-          imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+          imageUrl: 'https://images.pexels.com/photos/373888/pexels-photo-373888.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
           id: 2,
           linkUrl: 'shop/merchandise',
         },
         {
           title: 'food',
-          imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+          imageUrl: 'https://images.pexels.com/photos/6194/bread-food-baking-homemade.jpg?auto=compress&cs=tinysrgb&dpr=2&w=500',
           id: 3,
           linkUrl: 'shop/food',
         },
         {
           title: 'coffee',
-          imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+          imageUrl: 'https://images.pexels.com/photos/1695052/pexels-photo-1695052.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
           size: 'large',
           id: 4,
           linkUrl: 'shop/coffee',
         },
         {
           title: 'tea',
-          imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+          imageUrl: 'https://images.pexels.com/photos/227908/pexels-photo-227908.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
           size: 'large',
           id: 5,
           linkUrl: 'shop/tea',
@@ -47,8 +47,8 @@ class Directory extends React.Component {
   render() {
     return (
       <div className='directory-menu'>
-        {this.state.sections.map(({ title, id, imageUrl, size}) => (
-          <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+        {this.state.sections.map(({ id, ...otherSectionProps}) => (
+          <MenuItem key={id} {...otherSectionProps}/>
         ))}
       </div>
     );
