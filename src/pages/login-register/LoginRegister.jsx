@@ -1,11 +1,13 @@
 import React from 'react';
 import './LoginRegister.scss';
-import Login from '../../components/login/Login'
+import Login from '../../components/login/Login';
+import Signup from '../../components/signup/SignUp';
 
 const LoginRegister = () => {
     return (
-        <div>
-            <Login></Login>
+        <div className='login-register'>
+            <Login/>
+            <Signup/>
         </div>
     )
 }
